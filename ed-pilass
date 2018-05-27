@@ -1,0 +1,161 @@
+package ed_chavezhurtadojonathan2;
+//La clase Scanner de Java provee métodos para leer valores de entrada mediante el teclado
+import java.util.Scanner;
+//tipo de TAD pila
+import java.util.Stack;
+public class eD {
+    //Declaración del método principal
+    public static void main(String[] args) {
+        //Se ha creado el objeto "teclado" asociado al teclado representado por System.in    
+        Scanner teclado =new Scanner(System.in);
+        //crear una variable de tipo de dato 
+        int dato;
+        //condicion de verdadero o falso
+        boolean uso=true;
+       //Se ha creado el objeto "entrada" asociado al teclado representado por System.in
+        Scanner entrada=new Scanner(System.in);
+        //Condición trivial: siempre cierta
+        while(uso){
+            //menú para acceder a las pilas
+            System.out.println("********Ingrese opcion********"
+                                +"\n  ----  1. Ir a pila 1  ----"
+                                +"\n  ----  2. Ir a pila 2  ----"
+                                +"\n  ----  3. Salir        ----"
+                                +"\n******************************");
+            //se ha creado la variable"opcion" para acceder a cada una de las opciones del menu
+            int opcion =teclado.nextInt();
+            //switch se encarga de estructurar una selección múltiple
+            switch(opcion){
+                case 1:
+                        //crear nueva pila
+                        Stack pila1= new Stack();
+                        //condicion de verdadero o falso
+                        boolean usos=true;
+                    //Condición trivial: siempre cierta
+                    while(usos){
+                        //menu de pciones que se muestran en pantalla
+                 System.out.println("\n\n\t\t\t=========Menú Manejo Pila=============");
+                 System.out.println("\t\t\t=                                    =");
+                 System.out.println("\t\t\t= 1- Insertar elemento               =");
+                 System.out.println("\t\t\t= 2- Eliminar elemento               =");
+                 System.out.println("\t\t\t= 3- Imprimir pila                   =");
+                 System.out.println("\t\t\t= 4- Imprimir cima                   =");
+                 System.out.println("\t\t\t= 5- Contar repeticion               =");
+                 System.out.println("\t\t\t= 6- Regresar al menu principal      =");
+                 System.out.println("\t\t\t======================================");
+                 System.out.print("\t\t\tOpcion: ");
+                 //se ha creado la variable"op" para acceder a cada una de las opciones del menu
+                 int op = entrada.nextInt();
+                //switch se encarga de estructurar una selección múltiple
+                switch(op){
+                            case 1 :
+                                //elemento a ingresar por teclado
+                                dato=entrada.nextInt(); 
+                                //apilar elemento en la pila1
+                                pila1.push(dato);
+                                //imprime el elemento que se apilo
+                                System.out.println("elemento  "+dato+"  apilado");
+                            break;
+                            case 2 :
+                                //eliminar el ultimo elemeno en la pila1
+                                pila1.pop();
+                                //imprime el mensaje: elemento desapilado 
+                                System.out.println("elemento desapilado");
+                            break;
+                            case 3 :
+                                //pregunta: si pila1 esta vacia
+                                if(pila1.empty()){
+                                    //si la pila1 esta vacia imprime el mensaje: pila vacia
+                                    System.out.println("Pila Vacia" );
+                                //pregunta si la pila1 no esta vacia
+                                }else{
+                                    //si la pila no esta vacia imprime el mensaje: contenido mas los elementos que estan en la pila1
+                                    System.out.println("contenido"+ pila1);
+                                }
+                            break;
+                            case 4: 
+                                //imprime la cima(el ultimo elemento apilado)
+                                //la sentencia peek accede al ultimo elemento apilado
+                                System.out.println("Cima\n"+pila1.peek());
+                            break;
+                            case 5:
+                                
+                            break;
+                            case 6 :
+                                //salir de este menu
+                                usos=false;
+                            break;
+                        }
+                    }
+                break;
+                case 2:
+                        //crear nueva pila2
+                        Stack pila2= new Stack();
+                        //condicion de verdadero o falso
+                        boolean usos2=true;
+                         //Condición trivial: siempre cierta
+                    while(usos2){
+                        //menu de pciones que se muestran en pantalla
+                 System.out.println("\n\n\t\t\t=========Menú Manejo Pila=============");
+                 System.out.println("\t\t\t=                                    =");
+                 System.out.println("\t\t\t= 1- Insertar elemento               =");
+                 System.out.println("\t\t\t= 2- Eliminar elemento               =");
+                 System.out.println("\t\t\t= 3- Imprimir pila                   =");
+                 System.out.println("\t\t\t= 4- Imprimir cima                   =");
+                 System.out.println("\t\t\t= 5- Contar repeticion               =");
+                 System.out.println("\t\t\t= 6- Regresar al menu principal      =");
+                 System.out.println("\t\t\t======================================");
+                 System.out.print("\t\t\tOpcion: ");
+                 //se ha creado la variable"opcion" para acceder a cada una de las opciones del menu
+                 int op = entrada.nextInt();
+                //switch se encarga de estructurar una selección múltiple
+                switch(op){
+                            case 1 :
+                                //elemento a ingresar por teclado
+                                dato=entrada.nextInt(); 
+                                //apilar elemento en la pila2
+                                pila2.push(dato);
+                                //imprime el elemento que se apilo
+                                System.out.println("elemento  "+dato+"  apilado");
+                            break;
+                            case 2 :
+                                //eliminar el ultimo elemeno en la pila
+                                pila2.pop();
+                                //imprime el mensaje: elemento desapilado 
+                                System.out.println("elemento desapilado");
+                            break;
+                            case 3 :
+                                //pregunta: si pila2 esta vacia
+                                if(pila2.empty()){
+                                    //si la pila2 esta vacia imprime el mensaje: pila vacia
+                                    System.out.println("Pila Vacia" );
+                                //pregunta si la pila2 no esta vacia
+                                }else{
+                                    //si la pila no esta vacia imprime el mensaje: contenido mas los elementos que estan en la pila1
+                                    System.out.println("contenido"+ pila2);
+                                }
+                            break;
+                            case 4: 
+                                //imprime la cima(el ultimo elemento apilado)
+                                //la sentencia peek accede al ultimo elemento apilado
+                                System.out.println("Cima\n"+pila2.peek());
+                            break;
+                            case 5:
+                                
+                            break;
+                            case 6 :
+                                //salir de este menu
+                                usos2=uso;
+                        }
+                    }
+                        
+                    break;
+                case 3:
+                    //salir de este menu
+                    uso=false;
+                break;
+            }
+        }
+    
+    }
+}
